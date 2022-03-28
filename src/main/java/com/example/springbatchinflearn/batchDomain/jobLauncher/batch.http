@@ -1,0 +1,16 @@
+### Send POST request with json body
+POST http://localhost:8080/batch
+Content-Type: application/json
+
+{
+  "id": "JobLauncher"
+}
+
+###
+
+POST http://localhost:8080/batchAsync
+Content-Type: application/json
+
+{
+  "id": "JobLauncher"
+}
