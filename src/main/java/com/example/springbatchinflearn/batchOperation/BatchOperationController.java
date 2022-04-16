@@ -33,6 +33,8 @@ public class BatchOperationController {
     @PostMapping(value = "/batch/start")
     public String start(@RequestBody JobInfo jobInfo) throws NoSuchJobException, JobInstanceAlreadyExistsException, JobParametersInvalidException {
 /*
+        // 강의에서는 job이 하나라 괜찮지만, 나의 경우 모든 등록된 job이 iterator로 넘어와서
+		// job을 직접 지정해서 테스트함..
         for(Iterator<String> iterator = jobRegistry.getJobNames().iterator(); iterator.hasNext();){
             SimpleJob job = (SimpleJob)jobRegistry.getJob(iterator.next());
             System.out.println("jobName : " + job.getName());
